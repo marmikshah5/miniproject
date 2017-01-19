@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+		<title>register</title>
+		<meta name="description" content="">
+		<meta name="author" content="Dell">
+
+		<meta name="viewport" content="width=device-width; initial-scale=1.0">
+
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="shortcut icon" href="/favicon.ico">
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+		<link rel="stylesheet" href="CSS/bootstrap.min.css" />
+		 <style>	
+			.fieldset {
+				  border: 1px solid #ccc;
+				  padding: 10px;
+				}	
+				.invisible{
+				display:none;
+			}
+			.visible{
+				display:inline;
+				
+			}			
+			
+			
+			.error{
+				/*color:#f44336;*/
+				color:black;
+				font-style: italic;
+			}	
+			.errorborder{
+				border-color:red;
+			}
+			.form-control:focus{
+				border-color: #512da8;
+			}
+		</style>
+	</head>
+
+	<body>
+		<nav class="navbar navbar-default ">
+			<div class="container-fluid" style="background-color: #512da8">
+				<div class="navbar-header">
+						<a style="font-style:bold ;font-size:40px;color:#ff5722;" class="navbar-brand" >ELITE</a>
+					<a style="font-style:bold ;font-size:40px;color:#ff5722;" class="navbar-brand" >BANKING</a>	
+						<a style="font-style:italic ; font-size:10px ;padding-top: 25px ;color:#ffa000" class="navbar-brand">...where trust meet success</a>
+				</div>
+				
+			</div>
+		</nav>
+	<!--<div class="container-fluid  text-center  "   style="max-width: 100%"  > -->	
+		<form  method="post" action="register.php" enctype="multipart/form-data" class='container-fluid '  style="width: 550px;max-width: 100% " onsubmit="return validate()">
+    			 <fieldset class="fieldset" style="background-color: #009688 ;color:#ffffff"> 
+      				<legend style="color: #f44336">REGISTER</legend>
+      					<label >ALL FIELDS ARE  MANDATORY</label>
+      					FIRST NAME:&nbsp;<input type="text" name="firstname" id="firstname"  class="form-control" style="width: 300px; " />
+      					<span id="firstnameerror"  class="error invisible">Please Enter First Name</span><br>
+      					FATHER's NAME:&nbsp;<input type="text" id="secondname"  name="secondname" class="form-control" style=" width: 300px" />
+      					<span id="secondnameerror"  class="error invisible">Please Enter father Name</span><br />
+      					SURNAME:&nbsp;<input type="text" id="surname" name="surname" class="form-control" style=" width: 300px" />
+      					<span id="surnameerror"  class="error invisible">Please Enter  SurName</span><br>
+      					EMAIL ID:&nbsp;<input type="text" id="emailid" name="emailid" class="form-control" style=" width: 300px" />
+      					<span id="emailiderror"  class="error invisible">Please Enter proper email id</span><br />
+      					PHONE No(SHOULD BE OF 10digits):&nbsp;<input type="number" name="phoneno" id="phoneno" class="form-control" style=" width: 300px" />
+      					<span id="phonenoerror"  class="error invisible">Please Enter  propet Phone No</span><br />
+      					AGE:(Should be between 18 and 75) &nbsp;<input type="number" id="age" name="age" class="form-control" style=" width: 100px" />
+      					<span id="ageerror"  class="error invisible">Please Enter  Proper age OR You are NOT Eligible</span><br />
+      					ENTER PASSWORD:(SHOULD CONTAIN Minimum 8 characters at least 1 Uppercase Alphabet, 1 Lowercase Alphabet, 1 Number and 1 Special Character:)&nbsp;
+      					<input type="password" name="password" id="pass" class="form-control"style=" width: 300px" />
+      					<span id="passerror"  class="error invisible">Please Enter  Proper password</span><br />
+      					RE-ENTER PASSWORD:&nbsp;<input type="password" id="repass" class="form-control"style=" width: 300px" /><br>
+      					<span id="repasserror"  class="error invisible">Please Enter  same password</span><br />
+      					<p>
+							Gender<br>
+							<input type="radio" value="M" name="gender" id="male" checked  >
+							<label for="male">Male</label> &nbsp;
+							<input type="radio" value="F"name="gender" id="female" >
+							<label for="female">Female</label> &nbsp;
+						</p>
+						Country:
+						<select  style="color: black" name="country">
+							<option value="India" style="color: black">India</option>
+							<option value="USA" style="color: black">USA</option>
+							<option value="Russia" style="color: black">Russia</option>
+						</select><br /><br />
+							
+						<input style="margin-top: 10px;height:40px" class="btn btn-success btn-md "  type="submit" value="Register" />
+						   				
+        
+    		</fieldset>
+  		</form>
+  
+  <!--	</div>-->	
+  		<script src="js/registerknock.js"></script>
+	</body>
+</html>

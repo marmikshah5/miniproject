@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+		<title>mainpage</title>
+		<meta name="description" content="">
+		<meta name="author" content="Dell">
+
+		<meta name="viewport" content="width=device-width; initial-scale=1.0">
+
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="shortcut icon" href="/favicon.ico">
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+		<link rel="stylesheet" href="CSS/bootstrap.css" />
+		
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  		
+		<style>
+			.bg{
+				
+				width:500px;
+				border-radius:10px;
+				max-width:100%;
+			}
+			.dropbtn {
+			    /*background-color: #4CAF50;*/
+			    color: white;
+			    cursor: pointer;
+			    text-align: center;
+			}
+
+/* The container <div> - needed to position the dropdown content */
+				.dropdown {
+				    position: relative;
+				    /*display: inline-block;*/
+				}
+
+/* Dropdown Content (Hidden by Default) */
+				.dropdown-content {
+				    display: none;
+				    /*position: absolute;*/
+				   text-align:center;
+				    background-color: #03a9fa;
+				    min-width: 160px;
+				    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+				}
+
+/* Links inside the dropdown */
+				.dropdown-content a {
+				    color: white;
+				    padding: 12px 16px;
+				    text-decoration:none;
+				    display: block;
+				}
+
+/* Change color of dropdown links on hover */
+				.dropdown-content a:hover {background-color:#3f51b5 }
+
+/* Show the dropdown menu on hover */
+				.dropdown:hover .dropdown-content {
+				    display: block;
+				}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+				.dropdown:hover .dropbtn {
+				    /*background-color: #3e8e41;*/
+				}
+				
+				.onhover :hover{
+				background-color:	#cfd8dc;
+				}
+				
+				.fieldset {
+				  border: 1px solid #ccc;
+				  padding: 10px;
+				}	
+				.invisible{
+				display:none;
+			}
+			.visible{
+				display:inline;
+				
+			}			
+			
+			
+			.error{
+				/*color:#f44336;*/
+				color:black;
+				font-style: italic;
+			}	
+			.errorborder{
+				border-color:red;
+			}
+			
+			
+		</style>
+		
+	</head>
+
+	<body >
+		<nav class="navbar navbar-default" role="navigation">
+			<div class="container-fluid" style="background-color: #512da8">
+				<div class="navbar-header" >
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" >
+						
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a style="font-style:bold ;font-size:40px;color:#ff5722;" class="navbar-brand" >ELITE</a>
+					<a style="font-style:bold ;font-size:40px;color:#ff5722;" class="navbar-brand" >BANKING</a>
+					<a style="font-style:italic ; font-size:10px ;padding-top: 25px ;color:#ffa000" class="navbar-brand">...where trust meet success</a>
+				</div>	
+				<div class=" navbar-collapse collapse" id="myNavbar">
+						<ul class="nav navbar-nav navbar-right onhover" >
+							<li><a style="color: #ffa000;"  href="info.html ">About Us</a></li>
+							<li><a style="color: #ffa000" href="info.html#second">Why Us </a></li>
+							<li><a style="color: #ffa000" href="info.html">FAQ</a></li>
+							<li><a style="color: #ffa000" href="info.html#fourth">ConatctUs</a></li>
+							<li><a style="color: #ffa000" href="logout.php ">Logout</a></li>
+						</ul>
+				</div>
+					
+				</div>			
+			
+		</nav>
+		<div class=" container-fluid  "  align="middle" >
+			<img  class="container-fluid" src="images/bank.jpg" align="middle" style="width:800px;margin:auto;max-width:100%;max-height: 100%" />
+		</div>
+		 <div class=" container-fluid dropdown text-center bg  ">
+				<h2><input type="button" value="Cheque Book  & Pass Book"  class="btn-warning btn-lg bg dropbtn text-center"  /></h2>
+				  
+				  <div class="dropdown-content ">
+				    <a href="passbook.php">View and Print PassBook</a>
+				    <a href="#">View Past 5 Cheque Details</a>
+				  </div>
+
+			</div>
+			<div class=" container-fluid  text-center bg  ">
+				<h2><a href="transfer.html"><input type="button" value="Transfer Amount"  class="btn-warning btn-lg bg dropbtn text-center"  /></a></h2>
+				  
+				  
+				    <!--<a href="#">View and Print PassBook</a>-->
+		</div>
+			<!-- <div class="container-fluid dropdown text-center bg " method="post" action="register.php" enctype="multipart/form-data"   >
+				<h2><input type="button" value="Transfer amount" class="btn-warning btn-lg bg dropbtn"/></h2>
+				<form class="dropdown-content  text-center form-horizontal  " style="padding-top: 15px;" onsubmit="return validatetransfer()">
+					<div class="form-group">
+						   <label class="control-label " for="acno">Enter Your Account Number:</label>
+						      <div  style="margin-left: 40px; margin-right: 40px">
+						        <input name="acno" type="text" class="form-control" id="acno" placeholder="Enter Account Number" >
+						        <span id="acnoerror"  class="error invisible">Please Enter Account Number</span><br>
+						      </div>
+					</div>
+				     <div class="form-group">
+						   <label class="control-label " for="transpass">Enter Transaction Password:</label>
+						      <div style="margin-left: 40px; margin-right: 40px">
+						        <input name="tpass" type="text" class="form-control" id="transpass" placeholder="Enter Transcation Password">
+						      	<span id="transpasserror"  class="error invisible">Please Enter Transaction Password</span><br>
+						      </div>
+					 </div>
+				   <div class="form-group">
+						   <label class="control-label " for="ospno">Enter OSP Number:</label>
+						      <div style="margin-left: 40px; margin-right: 40px">
+						        <input name="ospno" type="text" class="form-control" id="ospno" placeholder="Enter OSP Number">
+						      	<span id="ospnoerror"  class="error invisible">Please Enter OSP Number</span><br>
+						      </div>
+					 </div>
+					 <div class="form-group">
+						   <label class="control-label " for="receiveracno">Enter  Receiver Account Nmber:</label>
+						      <div style="margin-left: 40px; margin-right: 40px">
+						        <input name="receiverno" type="text" class="form-control" id="receiveracno" placeholder="Enter Receiver Account Number">
+						      	<span id="receiveracnoerror"  class="error invisible">Please Enter Receiver A/C Number</span><br>
+						      </div>
+					 </div>
+				    <div class="form-group">
+						   <label class="control-label " for="amount">Enter Amount:</label>
+						      <div style="margin-left: 40px; margin-right: 40px">
+						        <input name="amount" type="text" class="form-control" id="amount" placeholder="Enter Amount">
+						        <span id="amounterror"  class="error invisible">Please Enter Amount</span><br>
+						      </div>
+					 </div>
+				    
+				    <div class="form-group">
+						   <label class="control-label " for="bankname">Enter Bank Name:</label>
+						      <div style="margin-left: 40px; margin-right: 40px">
+						        <input name="bankname" type="text" class="form-control" id="bankname" placeholder="Enter Bank Name">
+						      	<span id="banknameerror"  class="error invisible">Please Enter Bank Name</span><br>
+						      </div>
+					 </div>
+					 <div class="form-group">
+						   <label class="control-label " for="branchadd">Enter Branch Name:</label>
+						      <div style="margin-left: 40px; margin-right: 40px">
+						        <input name="branchname" type="text"  class="form-control " id="branchname" placeholder="Enter Branch Name">
+						      	<span id="branchnameerror"  class="error invisible">Please Enter Branch Name</span><br>
+						      </div>
+					 </div>
+				    <div class="form-group">
+						   <label class="control-label " for="remark">Remark:</label>
+						      <div style="margin-left: 40px; margin-right: 40px">
+						        <input name="remark" type="text" class="form-control" id="remark" placeholder="Remark">
+						      </div>
+					 </div>
+				    <button type="submit" class="btn btn-success " style="width:90px;height: 30px;max-width: 100%;border-radius:10px">Submit</button>
+				    <br>
+				 	
+				 	</form> 
+				  
+
+			</div> -->
+			
+			<div class="container-fluid dropdown text-center bg ">
+				<h2><input type="button" value="Loan" class="btn-warning btn-lg bg dropbtn" /></h2>
+				<div class="dropdown-content">
+				    <a href="homeloan.html">Home Loan/Property Loan</a>
+				    <a href="carloan.html">Car Loan</a>
+				    
+				    <a href="bloan.html">Business Loan</a>
+				    <a href="eduloan.html">Education Loan</a>
+				  </div>
+
+			</div>
+			
+			<div class="container-fluid dropdown text-center bg ">
+				<h2><input type="button" value="Account Information" class="btn-warning btn-lg bg dropbtn" /></h2>
+				<div class="dropdown-content">
+				    <a href="#">View and Print A/C Summary</a>
+				    <a href="#">View and Print Last Five Transaction </a>
+				  </div>
+			<br /><br />
+			
+			</div>
+			
+					
+			 
+
+				</body>
+</html>
